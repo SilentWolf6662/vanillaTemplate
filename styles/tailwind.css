@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+	@apply w-full px-3 mx-auto
+}
+
+@keyframes slideDown {
+	0% {
+		transform: translate(0%, -200%);
+	}
+
+	100% {
+		transform: translate(0%, 0%);
+	}
+}
+
+#mobile_menu {
+	@apply transition-all duration-[400ms] ease-css-in-out;
+}
+
+#mobile_menu.hidden {
+	@apply transition-all duration-[400ms] ease-css-in-out;
+}
+
+.icon {
+	@apply h-20 w-20;
+}
+
+.burger {
+	filter: url(#gooeyness);
+}
+
+.x {
+	@apply transition-transform duration-[400ms] scale-0;
+}
+
+.line {
+	@apply fill-none stroke-[white] stroke-[6px] origin-[50%];
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+}
+
+.x .line {
+	@apply stroke-[5.5px];
+}
+
+/* HamburgerMenuBtn */
+.hambugerIcon .x {
+	@apply transition-transform duration-[400ms];
+}
+
+.hambugerIcon .line {
+	@apply origin-[50%] transition-transform duration-[400ms] delay-100;
+}
+
+.active.hambugerIcon .line {
+	@apply transition-transform duration-[400ms];
+}
+
+.active.hambugerIcon .line1 {
+	@apply translate-x-[18px] translate-y-[-3px] -rotate-45 scale-[0.7];
+}
+
+.active.hambugerIcon .line2 {
+	@apply translate-x-[-18px] translate-y-[-3px] rotate-45 scale-[0.7];
+}
+
+.active.hambugerIcon .line3 {
+	@apply translate-y-0 rotate-45 scale-[0.7];
+}
+
+.active.hambugerIcon .line4 {
+	@apply translate-y-0 -rotate-45 scale-[0.7];
+}
+
+.active.hambugerIcon .line5 {
+	@apply translate-x-[18px] translate-y-[3px] rotate-45 scale-[0.7];
+}
+
+.active.hambugerIcon .line6 {
+	@apply translate-x-[-18px] translate-y-[3px] -rotate-45 scale-[0.7];
+}
+
+.active.hambugerIcon .x {
+	@apply transition-transform duration-[400ms] delay-100 scale-100;
+}

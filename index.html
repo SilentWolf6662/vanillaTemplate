@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/animate.css" rel="stylesheet" />
+    <link href="../styles/output.css" rel="stylesheet" />
+    <title>Tailwind Burgermenu</title>
+</head>
+
+<body class="bg-gray-900">
+    <header class="text-white">
+        <!-- #region Default Navbar -->
+        <nav class="flex justify-between items-center px-10 py-5 relative">
+            <a class="font-black text-xl animate_animated animate_fadeInDown" href="">LOGO</a>
+            <div class="hidden md:flex gap-16 text-gray-400">
+                <ul class="flex gap-10 items-center">
+                    <li class="animate_animated animate_fadeInDown">
+                        <a href="">About</a>
+                    </li>
+                    <li class="animate_animated animate_fadeInDown">
+                        <a href="">Services</a>
+                    </li>
+                    <li class="animate_animated animate_fadeInDown">
+                        <a href="">Pricing</a>
+                    </li>
+                    <li>
+                        <form method="GET">
+                            <div
+                                class="relative text-gray-600 focus-within:text-gray-400 animate_animated animate_fadeInDown">
+                                <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                                    <button type="submit" class="p-1 focus:outline-none focus:shadow-outline">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                            class="w-6 h-6">
+                                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                        </svg>
+                                    </button>
+                                </span>
+                                <input type="search" name="search"
+                                    class="py-2 text-sm text-white bg-gray-900 rounded-md pl-10 border-2 border-gray-700 focus:outline-none focus:bg-gray-700 focus:text-gray-200"
+                                    placeholder="Search..." autocomplete="off">
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+
+            </div>
+            <button id="menu_btn" class="w-10 md:hidden animate_animated animate_fadeInRight">
+                <svg class="h-20 absolute w-20">
+                    <defs>
+                        <filter id="gooeyness">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="blur" />
+                            <feColorMatrix in="blur" mode="matrix"
+                                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="gooeyness" />
+                            <feComposite in="SourceGraphic" in2="gooeyness" operator="atop" />
+                        </filter>
+                    </defs>
+                </svg>
+                <div class="flex flex-wrap max-h-40 w-[320px] sm:w-[640px]">
+                    <div id="burgerMenu" class="icon hambugerIcon">
+                        <svg class="h-20 absolute w-20 burger" version="1.1" height="100" width="100"
+                            viewBox="0 0 100 100">
+                            <path class="line line1" d="M 50,35 H 30" />
+                            <path class="line line2" d="M 50,35 H 70" />
+                            <path class="line line3" d="M 50,50 H 30" />
+                            <path class="line line4" d="M 50,50 H 70" />
+                            <path class="line line5" d="M 50,65 H 30" />
+                            <path class="line line6" d="M 50,65 H 70" />
+                        </svg>
+                        <svg class="h-20 absolute w-20 x" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+                            <path class="line" d="M 34,32 L 66,68" />
+                            <path class="line" d="M 66,32 L 34,68" />
+                        </svg>
+                    </div>
+                </div>
+            </button>
+
+            <!-- mobile menu -->
+
+            <div id="mobile_menu" class="absolute top-full bg-gray-900 text-gray-400 right-10 left-10 hidden z-10">
+                <div class="flex flex-col gap-10 p-5 md:hidden">
+                    <ul class="flex flex-col gap-2 items-center text-center">
+                        <li class="w-full animate_animated animate_fadeInRight animate_delay-instant animate_speed">
+                            <a class="py-5 block" href="">About</a>
+                        </li>
+                        <li class="w-full animate_animated animate_fadeInRight animate_delay-0dot5s animate_speed">
+                            <a class="py-5 block" href="">Services</a>
+                        </li>
+                        <li class="w-full animate_animated animate_fadeInRight animate_delay-1s animate_speed">
+                            <a class="py-5 block" href="">Pricing</a>
+                        </li>
+                        <form method="GET">
+                            <div
+                                class="relative text-gray-600 focus-within:text-gray-400 animate_animated animate_fadeInRight animate_delay-1dot5s animate_speed">
+                                <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                                    <button type="submit" class="p-1 focus:outline-none focus:shadow-outline">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                            class="w-6 h-6">
+                                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                        </svg>
+                                    </button>
+                                </span>
+                                <input type="search" name="search"
+                                    class="py-2 text-sm text-white bg-gray-900 rounded-md pl-10 border-2 border-gray-700 focus:outline-none focus:bg-gray-700 focus:text-gray-200"
+                                    placeholder="Search..." autocomplete="off">
+                            </div>
+                        </form>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- #endregion -->
+
+    </header>
+    <div class="text-center mt-12 animate_animated animate_fadeInUp">
+        <h1 class="text-4xl text-yellow-500 font-bold">Main Page</h1>
+        <h2 class="text-3xl text-yellow-500 font-bold">Heap Heap Arrayy!</h2>
+        <p class="text-xl text-white mt-4"> This html project are using tailwind. </p>
+    </div>
+    <script src="src/js/Navbar.js"></script>
+</body>
+
+</html>
