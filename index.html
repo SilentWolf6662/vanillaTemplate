@@ -17,15 +17,8 @@
             <a class="font-black text-xl animate_animated animate_fadeInDown" href="">LOGO</a>
             <div class="hidden md:flex gap-16 text-gray-400">
                 <ul class="flex gap-10 items-center">
-                    <li class="animate_animated animate_fadeInDown">
-                        <a href="">About</a>
-                    </li>
-                    <li class="animate_animated animate_fadeInDown">
-                        <a href="">Services</a>
-                    </li>
-                    <li class="animate_animated animate_fadeInDown">
-                        <a href="">Pricing</a>
-                    </li>
+                    <div class="flex gap-10 items-center" id="desktop">
+                    </div>
                     <li>
                         <form method="GET">
                             <div
@@ -80,18 +73,11 @@
 
             <!-- mobile menu -->
 
-            <div id="mobile_menu" class="absolute top-full bg-gray-900 text-gray-400 right-10 left-10 hidden z-10">
+            <div id="mobileMenu" class="absolute top-full bg-gray-900 text-gray-400 right-10 left-10 hidden z-10">
                 <div class="flex flex-col gap-10 p-5 md:hidden">
                     <ul class="flex flex-col gap-2 items-center text-center">
-                        <li class="w-full animate_animated animate_fadeInRight animate_delay-instant animate_speed">
-                            <a class="py-5 block" href="">About</a>
-                        </li>
-                        <li class="w-full animate_animated animate_fadeInRight animate_delay-0dot5s animate_speed">
-                            <a class="py-5 block" href="">Services</a>
-                        </li>
-                        <li class="w-full animate_animated animate_fadeInRight animate_delay-1s animate_speed">
-                            <a class="py-5 block" href="">Pricing</a>
-                        </li>
+                        <div class="flex flex-col gap-2 items-center text-center" id="mobile">
+                        </div>
                         <form method="GET">
                             <div
                                 class="relative text-gray-600 focus-within:text-gray-400 animate_animated animate_fadeInRight animate_delay-1dot5s animate_speed">
@@ -116,12 +102,21 @@
         <!-- #endregion -->
 
     </header>
-    <div class="text-center mt-12 animate_animated animate_fadeInUp">
+    <main class="text-center mt-12 animate_animated animate_fadeIn animate_slow">
         <h1 class="text-4xl text-yellow-500 font-bold">Main Page</h1>
         <h2 class="text-3xl text-yellow-500 font-bold">Heap Heap Arrayy!</h2>
         <p class="text-xl text-white mt-4"> This html project are using tailwind. </p>
-    </div>
-    <script src="src/js/Navbar.js"></script>
+    </main>
+    <footer class="text-center mt-12 animate_animated animate_fadeInUp">
+        <form name="contactForm" action="#" onsubmit="return false">
+            <input type="email" id="emailValue" name="email" placeholder="Indtast din email..." autocomplete="off"
+                class="py-2 text-sm text-white bg-gray-900 rounded-md pl-2 border-2 border-gray-700 focus:outline-none focus:bg-gray-700 focus:text-gray-200">
+            <input type="submit" value="Tilmeld" onclick="validateEmail(document.contactForm.email)"
+                class="p-2 text-sm text-white bg-gray-900 rounded-md border-2 border-gray-700 focus:outline-none focus:bg-gray-700 focus:text-gray-200">
+        </form>
+    </footer>
+    <script src="src/js/Navbar.js" type="module"></script>
+    <script src="src/js/Contact.js"></script>
 </body>
 
 </html>

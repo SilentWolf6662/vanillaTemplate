@@ -1,0 +1,36 @@
+{
+	"content": [
+		{
+			"name": "About",
+			"link": "about.html",
+			"template": {
+				"desktop": "<li class=\"animate_animated animate_fadeInDown\"><a href=`$link`>$name</a></li>",
+				"mobile": "<li class=\"w-full animate_animated animate_fadeInRight animate_delay-instant animate_speed\"><a class=\"py-5 block\" href=`$link`>$name</a></li>"
+			}
+		},
+		{
+			"name": "Services",
+			"link": "services.html",
+			"template": {
+				"desktop": "<li class=\"animate_animated animate_fadeInDown\"><a href=`$link`>$name</a></li>",
+				"mobile": "<li class=\"w-full animate_animated animate_fadeInRight animate_delay-0dot5s animate_speed\"><a class=\"py-5 block\" href=`$link`>$name</a></li>"
+			}
+		},
+		{
+			"name": "Pricing",
+			"link": "price.html",
+			"template": {
+				"desktop": "<li class=\"animate_animated animate_fadeInDown\"><a href=`$link`>$name</a></li>",
+				"mobile": "<li class=\"w-full animate_animated animate_fadeInRight animate_delay-1s animate_speed\"><a class=\"py-5 block\" href=`$link`>$name</a></li>"
+			}
+		},
+		{
+			"name": "Contact",
+			"link": "contact.html",
+			"template": {
+				"desktop": "<li class=\"animate_animated animate_fadeInDown\"><a href=`$link`>$name</a></li>",
+				"mobile": "<li class=\"w-full animate_animated animate_fadeInRight animate_delay-1dot5s animate_speed\"><a class=\"py-5 block\" href=`$link`>$name</a></li>"
+			}
+		}
+	]
+}
